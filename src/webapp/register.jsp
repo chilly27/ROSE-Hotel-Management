@@ -145,7 +145,12 @@
 <section class="register-section">
     <div class="register-card">
         <h3>Create an Account</h3>
-
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger mt-3">${error}</div>
+        </c:if>
+        <c:if test="${not empty success}">
+            <div class="alert alert-success mt-3">${success}</div>
+        </c:if>
         <!-- Register Form Begin -->
         <form action="/register" method="post">
             <div class="form-group">

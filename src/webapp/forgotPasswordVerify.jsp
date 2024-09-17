@@ -116,7 +116,12 @@
     <div class="verify-otp-card">
         <h3>Verify Your OTP</h3>
         <p class="text-center">Enter the OTP sent to your email or phone to verify your account.</p>
-
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger mt-3">${error}</div>
+        </c:if>
+        <c:if test="${not empty success}">
+            <div class="alert alert-success mt-3">${success}</div>
+        </c:if>
         <!-- Verify OTP Form Begin -->
         <form action="/forgot-password-verify" method="post">
             <div class="form-group">

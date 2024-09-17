@@ -116,7 +116,12 @@
     <div class="forgot-password-card">
         <h3>Forgot Your Password?</h3>
         <p class="text-center">Enter your email address and we'll send you a link to reset your password.</p>
-
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger mt-3">${error}</div>
+        </c:if>
+        <c:if test="${not empty success}">
+            <div class="alert alert-success mt-3">${success}</div>
+        </c:if>
         <!-- Forgot Password Form Begin -->
         <form action="/forgot-password" method="post">
             <div class="form-group">

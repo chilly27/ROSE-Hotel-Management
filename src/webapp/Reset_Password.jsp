@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quên M?t Kh?u</title>
+    <title>Quï¿½n M?t Kh?u</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -114,6 +114,12 @@ button:hover {
     <div class="login-container">
         <div class="login-form">
             <h2>Reset password</h2>
+            <c:if test="${not empty error}">
+                <div class="alert alert-danger mt-3">${error}</div>
+            </c:if>
+            <c:if test="${not empty success}">
+                <div class="alert alert-success mt-3">${success}</div>
+            </c:if>
             <form action="/forgot-password" method="POST">
                 <div class="input-group">
                     <label for="email">New password </label>

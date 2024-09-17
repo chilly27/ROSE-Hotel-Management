@@ -135,6 +135,12 @@
 
                     <!-- Form to Edit Profile -->
                     <form action="/profile" id="editForm" class="edit-form" method="POST">
+                        <c:if test="${not empty error}">
+                            <div class="alert alert-danger mt-3">${error}</div>
+                        </c:if>
+                        <c:if test="${not empty success}">
+                            <div class="alert alert-success mt-3">${success}</div>
+                        </c:if>
                         <div class="form-group">
                             <label for="name">Full Name</label>
                             <input type="text" class="form-control" id="name" value="<%= account.getUserName() %>" name="name">

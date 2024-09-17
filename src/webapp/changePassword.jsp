@@ -114,7 +114,12 @@
 <section class="change-password-section">
     <div class="change-password-card">
         <h3>Change Your Password</h3>
-
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger mt-3">${error}</div>
+        </c:if>
+        <c:if test="${not empty success}">
+            <div class="alert alert-success mt-3">${success}</div>
+        </c:if>
         <!-- Change Password Form Begin -->
         <form action="#" method="post">
             <div class="form-group">

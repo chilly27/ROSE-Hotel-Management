@@ -116,7 +116,12 @@
     <div class="reset-password-card">
         <h3>Set Your New Password</h3>
         <p class="text-center">Please enter your new password to reset your account password.</p>
-
+        <c:if test="${not empty error}">
+            <div class="alert alert-danger mt-3">${error}</div>
+        </c:if>
+        <c:if test="${not empty success}">
+            <div class="alert alert-success mt-3">${success}</div>
+        </c:if>
         <!-- Reset Password Form Begin -->
         <form action="/forgot-password-reset" method="post">
             <div class="form-group">
