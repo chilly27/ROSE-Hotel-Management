@@ -1,3 +1,4 @@
+<%-- THẻ này để bật EL trong JSP --%>
 <%@ page isELIgnored="false" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -147,11 +148,11 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" value="<%= account.getEmail() %>" readonly name="email">
+                            <input type="email" class="form-control" id="email" value="<%= account.getEmail() %>" readonly name="email1">
                         </div>
                         <div class="form-group">
                             <label for="dob">Date of Birth</label>
-                            <input type="text" class="form-control" id="dob" value="<%= account.getDob() %>" name="dob">
+                            <input type="date" class="form-control" id="dob" value="<%= account.getDob() %>" name="dob">
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone</label>

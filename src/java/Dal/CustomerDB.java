@@ -117,6 +117,7 @@ public class CustomerDB extends DBContext {
         return false;
     }
 
+    //Update profile
     public Customer changeUserInfo(String username, String phone, Date dob, String address, int customerID) {
         String sql = "UPDATE [dbo].[Customer]\n"
                     + "SET [Username] = ?\n"
@@ -125,6 +126,7 @@ public class CustomerDB extends DBContext {
                     + ",[Address] = ?\n"
                     + "WHERE [CustomerID] = ?";
         try {
+            // Khai báo một PreparedStatement
             PreparedStatement st = connection.prepareStatement(sql);
             st.setString(1, username);
             st.setString(2, phone);

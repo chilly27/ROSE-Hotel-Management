@@ -63,10 +63,10 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        if (!Permission.checkLogin(request, response)) {
-//            response.sendRedirect("/login");
-//            return;
-//        }
+        if (!Permission.checkLogin(request, response)) {
+            response.sendRedirect("/login");
+            return;
+        }
         request.getRequestDispatcher("profile.jsp").forward(request, response);
     }
 
@@ -80,26 +80,24 @@ public class ProfileServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//        if (!Permission.checkLogin(request, response)) {
-//            response.sendRedirect("/login");
-//            return;
-//        }
+        if (!Permission.checkLogin(request, response)) {
+            response.sendRedirect("/login");
+            return;
+        }
         HttpSession session = request.getSession();
         String get_name = request.getParameter("name");
         String get_dob = request.getParameter("dob");
         Date dob = Date.valueOf(get_dob);
         String get_phone = request.getParameter("phone");
         String get_address = request.getParameter("address");
+
         CustomerDB customerDB = new CustomerDB();
         Customer customer = (Customer) session.getAttribute("account");
-        if (customer == null) {
-            response.sendRedirect("/login");
-            return;
-        }
+
         customer.setUserName(get_name);
         customer.setCusPhone(get_phone);
-//        customer.setAddress(get_address);
-
+        customer.setAddress(get_address);
+        customer.setDob(dob);
 
         customer = customerDB.changeUserInfo(get_name, get_phone, dob, get_address, customer.getCustomerID());
         session.setAttribute("account", customer);
