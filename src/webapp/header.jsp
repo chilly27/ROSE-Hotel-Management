@@ -143,6 +143,7 @@
                                 <div class="profile-dropdown">
                                     <ul>
                                         <li><a href="/profile">Profile</a></li>
+                                        <li><a href="/change-password">Change Password</a></li>
                                         <li><a href="/logout">Logout</a></li>
                                     </ul>
                                 </div>
