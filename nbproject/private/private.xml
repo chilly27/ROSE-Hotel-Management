@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/SWP/Project-demo/web/register.jsp</file>
+            <file>file:/C:/SWP/Project-demo/web/verifyEmail.jsp</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Model/Customer.java</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Controller/SendOTPServlet.java</file>
+            <file>file:/C:/SWP/Project-demo/web/VerifyOtp.jsp</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Controller/VerifyServlet.java</file>
+            <file>file:/C:/SWP/Project-demo/web/index.html</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Controller/VerifyEmailServlet.java</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Dal/DBContext.java</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Controller/RegisterServlet.java</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Dal/CustomerDB.java</file>
+            <file>file:/C:/SWP/Project-demo/src/java/Controller/SendEmail.java</file>
+        </group>
+    </open-files>
+</project-private>
